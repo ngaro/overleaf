@@ -74,5 +74,9 @@ EXPOSE 80
 
 WORKDIR /
 
+#TexLive
+RUN tlmgr update --self
+RUN tlmgr install scheme-full
+
 ENTRYPOINT ["/sbin/my_init"]
 
